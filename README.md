@@ -24,7 +24,7 @@ $initData = [
     'apiSecret' => 'apiSecret',
     'domain' => 'https://stage.apis.avata.bianjie.ai', //测试地址
 ];
-$avataLogic = new MrMoney\AvataLogic\AvataLogic($initData);
+$avataLogic = new Huangang\AvataLogic\AvataLogic($initData);
 
 //创建链账户demo
 $name = 'account_name';

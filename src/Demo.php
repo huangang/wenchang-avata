@@ -2,7 +2,7 @@
 
 namespace Demo;
 
-use MrMoney\AvataLogic\AvataLogic;
+use Huangang\AvataLogic\AvataLogic;
 
 class Demo
 {

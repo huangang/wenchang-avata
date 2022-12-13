@@ -1,16 +1,16 @@
 {
-  "name": "mr-money/wenchang-avata",
+  "name": "huangang/wenchang-avata",
   "description": "文昌链 Avata API快速接入 SDK",
   "type": "library",
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "MrMoney\\AvataLogic\\": "src/"
+      "Huangang\\AvataLogic\\": "src/"
     }
   },
   "authors": [
     {
-      "name": "mr-money"
+      "name": "mr-money,huangang"
     }
   ],
   "require": {

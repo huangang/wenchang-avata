@@ -12,7 +12,7 @@
  * https://apis.avata.bianjie.ai/
  */
 
-namespace MrMoney\AvataLogic;
+namespace Huangang\AvataLogic;
 
 use Exception;
 
@@ -50,6 +50,29 @@ class AvataLogic
             'operation_id' => $operationId,
         ];
         return $this->request('/v1beta1/account', [], $body, 'POST');
+    }
+
+    /**
+     * @description 批量创建链账户
+     *
+     * @api https://apis.avata.bianjie.ai/#tag/%E9%93%BE%E8%B4%A6%E6%88%B7%E6%8E%A5%E5%8F%A3/paths/~1v1beta1~1accounts/post
+     *
+     * @param string $operationId 操作ID
+     * @param int $count 批量创建链账户的数量 默认1
+     *
+     * @return array
+     * @throws Exception
+     */
+    public function CreateChainAccounts(string $operationId, int $count = 1): array
+    {
+        if (!$operationId) {
+            throw new Exception('必传参数为空');
+        }
+        $body = [
+            'count' => $count,
+            'operation_id' => $operationId,
+        ];
+        return $this->request('/v1beta1/accounts', [], $body, 'POST');
     }
 
 
