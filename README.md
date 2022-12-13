@@ -10,10 +10,10 @@ Avata 是一款由边界智能基于区块链底层核心技术以及支持复�
 
 ```shell
 # 安装
-composer require mr-money/wenchang-avata
+composer require huangang/wenchang-avata
 
 # 更新
-composer update mr-money/wenchang-avata
+composer update huangang/wenchang-avata
 ```
 
 ### 使用
