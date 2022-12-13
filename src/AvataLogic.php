@@ -328,7 +328,7 @@ class AvataLogic
             'tag' => !empty($data['tag']) ? $data['tag'] : '',
         ];
 
-        return $this->request('/v1beta1/nft/class-transfers/' . $data['class_id'] . '/' . $data['owner'] . '/' . $data['nft_id'], [], $body, 'DELETE');
+        return $this->request('/v1beta1/nft/nfts/' . $data['class_id'] . '/' . $data['owner'] . '/' . $data['nft_id'], [], $body, 'DELETE');
     }
 
     /**
