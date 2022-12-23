@@ -115,22 +115,15 @@ class AvataLogic
      *
      * @api https://apis.avata.bianjie.ai/#tag/%E9%93%BE%E8%B4%A6%E6%88%B7%E6%8E%A5%E5%8F%A3/paths/~1v1beta1~1accounts/get
      *
-     * @param array $data
+     * @param array $query
      *
      * @return array
      */
-    public function QueryAccounts(array $data): array
+    public function QueryAccounts(array $query): array
     {
-        $query = [
-            'offset' => $data['offset'],
-            'limit' => $data['limit'],
-            'account' => $data['account'],
-            'name' => $data['name'],
-            'operation_id' => $data['operation_id'],
-            'start_date' => $data['start_date'],
-            'end_date' => $data['end_date'],
-            'sort_by' => $data['sort_by'],
-        ];
+        if (!$query['operation_id']) {
+            throw new Exception('必传参数为空');
+        }
         return $this->request('/v1beta1/accounts', $query, [], 'GET');
     }
 
