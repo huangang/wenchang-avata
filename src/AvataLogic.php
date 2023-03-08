@@ -164,15 +164,15 @@ class AvataLogic
         $body = [
             'name' => $data['name'],
             'class_id' => $data['class_id'] ?? '',
-            'symbol' => $data['symbol'] ?? '',
-            'description' => $data['description'] ?? '',
-            'uri' => $data['uri'] ?? '',
-            'uri_hash' => $data['uri_hash'] ?? '',
-            'data' => $data['data'] ?? '',
             'owner' => $data['owner'],
-            'tag' => $data['tag'] ?? [],
             'operation_id' => $operationId,
         ];
+        isset($data['symbol']) && $body['symbol'] = $data['symbol'];
+        isset($data['description']) && $body['description'] = $data['description'];
+        isset($data['uri']) && $body['uri'] = $data['uri'];
+        isset($data['uri_hash']) && $body['uri_hash'] = $data['uri_hash'];
+        isset($data['data']) && $body['data'] = $data['data'];
+        isset($data['tag']) && $body['tag'] = $data['tag'];
         return $this->request('/v1beta1/nft/classes', [], $body, 'POST');
     }
 
